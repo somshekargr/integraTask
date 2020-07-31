@@ -11,7 +11,7 @@ active_li.style.borderBottom = '1px solid #27146F';
 
 
 // faker
-
+function studentDetails(){
 let genders= [ 'Female' , 'Male' ];
 const createStudent = () => {
     return {
@@ -118,6 +118,7 @@ function closeStdDetail() {
   studentDetails.classList.remove('show-std-details')
   document.getElementById('studentBlock').style.padding = '100px 0px 0px 0px'
 }
+}
 
 
 
@@ -199,3 +200,22 @@ if(password.value === '' || password.value === null){
   }
 });
 }
+
+{
+var inp = document.getElementsByTagName("input");
+var btn = document.getElementById("submitbutton");
+console.log(btn )
+
+btn.disabled = "disabled";
+
+function checkForm() {
+    for (var i = 0; i < inp.length; i++ ) {
+        if (inp[i].checkValidity() == false ) {
+             btn.disabled = "disabled";
+        } else
+             btn.disabled = false;
+        
+    }
+}
+}
+

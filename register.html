@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Integra Micro School</title>
 </head>
-<body onload="registerStudent()">
+<body >
     <!-- header section with nav bar -->
     <header id="headerBlock">
         <div>
@@ -58,48 +58,48 @@
       </div>
       <!--/col-3-->
       <div class="col-sm-9">
-            <form id="register-form" action="##" method="post"  >
+            <form id="register-form" action="##" method="post" onkeyup="checkForm()" autocomplete="off" novalidate>
               <div class="form-group">
                 <div class=>
                   <label class=""for="first_name"><h4>First name</h4></label>
-                  <input type="text" class="form-control "name="first_name" id="first_name" placeholder="first name"title="enter your first name if any."/>
+                  <input type="text" class="form-control "name="first_name" id="first_name" placeholder="first name"title="enter your first name if any." required/>
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-xs-6">
                   <label for="last_name"><h4>Last name</h4></label>
-                  <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any."/>
+                  <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any." required/>
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-xs-6">
                   <label for="birthdate"><h4>Birth Date</h4></label>
-                  <input type="date" class="form-control" name="birthdate" id="birthdate" placeholder="enter DOB" title="enter your birth date."/>
+                  <input type="date" class="form-control" name="birthdate" id="birthdate" placeholder="enter DOB" title="enter your birth date." required/>
                 </div>
               </div>
               
               <div class="form-group">
                 <div class="col-xs-6">
                   <label for="email"><h4>Email</h4></label>
-                  <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email." />
+                  <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email." required/>
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-xs-6">
               <label for="mobile"><h4>Mobile</h4></label>
-                  <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" title="enter your mobile number if any."/>
+                  <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" title="enter your mobile number if any." required/>
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-xs-6">
                   <label for="city"><h4>City</h4></label>
-                  <input type="city" class="form-control"  id="city"  placeholder="example:Bangalore,India" title="enter a location"/>
+                  <input type="city" class="form-control"  id="city"  placeholder="example:Bangalore,India" title="enter a location" required/>
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-xs-6">
                   <label for="password"><h4>Password</h4></label>
-                  <input type="password" class="form-control" name="password" id="password" placeholder="password" title="enter your password."/>
+                  <input type="password" class="form-control" name="password" id="password" placeholder="password" title="enter your password." required/>
                 </div>
               </div>
               <div class="form-group">
@@ -109,15 +109,16 @@
                     id="password2"
                     placeholder="password2"
                     title="enter your password2."
+                    required
                   />
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-xs-12">
                   <br />
-       <div id="alertBlock"></div>
+       <!-- <div id="alertBlock"></div> -->
 
-                  <button class="btn btn-lg btn-success" style="width: 100%;" type="submit">
+                  <button id="submitbutton" class="btn btn-lg btn-success" style="width: 100%;" type="submit">
                      Register
                   </button>
                   <button class="btn btn-lg btn-secondary my-3" style="width: 100%;" type="reset">
